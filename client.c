@@ -1,7 +1,7 @@
 // Build: gcc client.c -o client -lws2_32
 // Usage: client.exe <server_ip> <port>
 // You connect to the server and type messages. Other people see what you type, we all know you have no friends and your gonna test it on your terminal.
-// and you see what they type. It's like a group chat. But with no fancy stuff.
+// and you see what they type. 
 // If you run into trouble, check your firewall.
 
 #define _WIN32_WINNT 0x0601
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == INVALID_SOCKET)
     {
-        printf("Could not create socket. Error: %d\n", WSAGetLastError());
+        printf("Couldn't create socket. Error: %d\n", WSAGetLastError());
         WSACleanup();
         return 1;
     }
